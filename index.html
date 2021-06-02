@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1adebb3231.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <nav>
+    <ul class="wrapper desktopList">
+      <div class="siteTitle">
+        <li>paulszadurski</li>
+      </div>
+      <div class="siteNav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </div>      
+      <li>
+        <span class="mobileNavOpen wrapper" onclick="openMenu()"><i class="fas fa-bars"></i></span>
+      </li>
+    </ul>
+    <div class="mobileNav" id="mobileNav">
+      <div class="mobileNavClose wrapper"><i class="far fa-times-circle" onclick="closeMenu()"></i></div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <div class="wrapper">
+      <h1>Paul Szadurski</h1>
+      <p>Web Developer</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="about" id="about">
+      <div class="wrapper">
+        <h2><span>About Me</span></h2>
+        <div class="aboutContainer">
+          <div class="aboutText">
+            <h3>Hi, I'm <span class="name">Paul Szadurski</span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse consectetur porro reprehenderit illum maxime animi harum id expedita, ut enim itaque eaque iusto magnam quidem, eligendi pariatur! Officiis soluta, quae magni mollitia et, sunt aspernatur fugiat pariatur a repudiandae officia, maiores assumenda cum obcaecati consequuntur nisi? Neque officiis tempore rem est optio repellat voluptatem dolorem quas assumenda perspiciatis! Incidunt, eum ipsam necessitatibus qui veniam, nostrum, dolorum sed accusamus dignissimos quo corrupti voluptas fugit nihil dolores aut?</p>
+          </div>
+          <div class="aboutImgContainer">
+            <img src="https://via.placeholder.com/300.png/09f/fff" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <div class="wrapper">
+        <h2><span>My Skills</span></h2>
+        <ul>
+          <li>
+            <i class="fab fa-html5"></i>
+          </li>
+          <li>
+            <i class="fab fa-css3-alt"></i>
+          </li>
+          <li>
+            <i class="fab fa-sass"></i>
+          </li>
+          <li>
+            <i class="fab fa-js-square"></i>
+          </li>
+          <li>
+            <i class="fab fa-react"></i>
+          </li>
+          <li>
+            <i class="fas fa-database"></i>
+          </li>
+          <li>
+            <i class="fas fa-fire-alt"></i>
+          </li>
+          <li>
+            <i class="fab fa-github-square"></i>
+          </li>
+          <li>
+            <i class="fas fa-user-friends"></i>
+          </li>
+          <li>
+            <i class="fas fa-mobile-alt"></i>
+          </li>
+          <li>
+            <i class="fas fa-universal-access"></i>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="projects wrapper" id="projects">
+      <h2><span>My Projects</span></h2>
+
+      <ul>
+        <li>
+          <div class="projectContainer">
+            <h3>Podcast Prioritizer</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse debitis illum velit, sed fugit aperiam. Nihil amet natus obcaecati, consectetur, non voluptatem cupiditate modi in dolorum a doloremque exercitationem magnam accusamus commodi vitae ratione iure. Totam provident laborum excepturi reprehenderit?</p>
+            <a href="https://github.com/capibara33/podcastPrioritizer">Github</a>
+            <a href="https://podcast-prioritizer.netlify.app/">Live</a>
+          </div>
+          <div class="imgContainer"><img src="https://via.placeholder.com/400.png/09f/fff" alt=""></div>
+        </li>
+
+        <li>
+          <div class="projectContainer2">
+            <h3>Anonymovies</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse debitis illum velit, sed fugit aperiam. Nihil amet
+              natus obcaecati, consectetur, non voluptatem cupiditate modi in dolorum a doloremque exercitationem magnam accusamus
+              commodi vitae ratione iure. Totam provident laborum excepturi reprehenderit?</p>
+            <a href="https://github.com/PaulSzadurski/projectThree">Github</a>
+            <a href="https://anonymovies.netlify.app/">Live</a>
+          </div>
+          <div class="imgContainer"><img src="https://via.placeholder.com/400.png/09f/fff" alt=""></div>
+        </li>
+
+        <li>
+          <div class="projectContainer">
+            <h3>Bang For Your Buck</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse debitis illum velit, sed fugit aperiam. Nihil amet
+              natus obcaecati, consectetur, non voluptatem cupiditate modi in dolorum a doloremque exercitationem magnam accusamus
+              commodi vitae ratione iure. Totam provident laborum excepturi reprehenderit?</p>
+            <a href="https://github.com/Paul-William-Project/Paul-William-Project-Two">Github</a>
+            <a href="https://paul-william-project.github.io/Paul-William-Project-Two/">Live</a>
+          </div>
+          <div class="imgContainer"><img src="https://via.placeholder.com/400.png/09f/fff" alt=""></div>
+        </li>
+
+        <li>
+          <div class="projectContainer2">
+            <h3>Willow</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse debitis illum velit, sed fugit aperiam. Nihil amet
+              natus obcaecati, consectetur, non voluptatem cupiditate modi in dolorum a doloremque exercitationem magnam accusamus
+              commodi vitae ratione iure. Totam provident laborum excepturi reprehenderit?</p>
+            <a href="https://github.com/PaulSzadurski/projectOne">Github</a>
+            <a href="https://paulszadurski.github.io/projectOne/">Live</a>
+          </div>
+          <div class="imgContainer"><img src="https://via.placeholder.com/400.png/09f/fff" alt=""></div>
+        </li>
+      </ul>
+
+    </section>
+
+    <section class="contact" id="contact">
+    <div class="wrapper contactContainer">
+      <div class="contactText">
+        <h2>Let's Get in Touch</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quis dolore, expedita adipisci perspiciatis nihil id cum delectus quod quam ab animi eligendi dolorum repellendus sint? Dolorum pariatur error consequatur.</p>
+        <ul>
+          <li>
+            <i class="fas fa-envelope-square"></i>
+          </li>
+          <li>
+            <i class="fab fa-github-square"></i>
+          </li>
+          <li>
+            <i class="fab fa-linkedin"></i>
+          </li>
+        </ul>
+      </div>
+      <form action="submit">
+        <h2>Send Me a Message</h2>
+        <label for="userName">Your Name:</label>
+        <input required type="text" id="userName" name="userName">
+        <label for="userEmail">Your Email:</label>
+        <input required type="text" id="userEmail" name="userEmail">
+        <label for="message">Your Inquiry:</label>
+        <textarea required name="message" id="message" rows="10"></textarea>
+        <button type="submit">Submit Inquiry <i class="fas fa-arrow-right"></i></button>
+      </form>
+    </div>
+    </section>
+  </main>
+  <footer>
+    <p class="wrapper">
+      Developed by <span>Paul Szadurski</span>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
