@@ -151,6 +151,7 @@ h1 {
   margin: 0;
   font-size: 6rem;
   text-transform: uppercase;
+  text-align: center;
 }
 
 header p {
@@ -216,14 +217,21 @@ h2 span {
 .skills ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   padding-bottom: 2rem;
 }
 
 .skills li {
+  flex-basis: 25%;
+  text-align: center;
+}
+
+.skills p {
+  margin-top: 0;
+}
+
+.skills i {
   color: goldenrod;
-  font-size: 2rem;
-  padding: 1rem;
+  font-size: 4rem;
 }
 
 /* projects */
@@ -256,6 +264,15 @@ h2 span {
   background-color: #343a40;
   padding: 0.5rem;
   margin-right: 1rem;
+}
+
+p.technologiesUsed {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.projects i {
+  padding-right: 1rem;
 }
 
 /* contact */
@@ -377,6 +394,12 @@ footer span {
 }
 }
 
+@media (max-width: 600px) {
+.skills li {
+  flex-basis: 33%;
+  }
+}
+
 @media (max-width: 570px) {
   .wrapper {
     max-width: 90%;
@@ -390,5 +413,13 @@ footer span {
 @media (max-width: 432px) {
   .imgContainer, .aboutImgContainer {
     width: 100%;
+  }
+
+  .skills i {
+  font-size: 2rem;
+  }
+
+  .skills p {
+    font-size: 0.7rem;
   }
 }
