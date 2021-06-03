@@ -119,9 +119,13 @@
 
     <section class="projects wrapper" id="projects">
       <h2><span>My Projects</span></h2>
-
+      <div class="projectControls">
+        <i class="fas fa-backward" onclick="projectForward(-1)"></i>
+        <p><span id="projectNumber"></span>/4</p>
+        <i class="fas fa-forward" onclick="projectForward(1)"></i>
+      </div>
       <ul>
-        <li>
+        <li class="projectCarousel transition">
           <div class="projectContainer">
             <h3>Podcast Prioritizer <i class="fas fa-headphones-alt"></i></h3>
             <p class="technologiesUsed">
@@ -134,11 +138,13 @@
             <a href="https://github.com/capibara33/podcastPrioritizer">Github</a>
             <a href="https://podcast-prioritizer.netlify.app/">Live</a>
           </div>
-          <div class="imgContainer"><img src="https://via.placeholder.com/400.png/09f/fff" alt=""></div>
+          <div class="imgContainer">
+            <img src="assets/podcast1.png" alt="">
+          </div>
         </li>
 
-        <li>
-          <div class="projectContainer2">
+        <li class="projectCarousel transition">
+          <div class="projectContainer">
             <h3>Anonymovies <i class="fas fa-film"></i></h3>
             <p class="technologiesUsed">
               <i class="fab fa-react"></i>
@@ -146,16 +152,18 @@
               <i class="fab fa-html5"></i>
               <i class="fab fa-css3-alt"></i>
             </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse debitis illum velit, sed fugit aperiam. Nihil amet
-              natus obcaecati, consectetur, non voluptatem cupiditate modi in dolorum a doloremque exercitationem magnam accusamus
-              commodi vitae ratione iure. Totam provident laborum excepturi reprehenderit?</p>
+            <p>Anonymous movie review board made using React. Users can write a
+            review which is added to a database upon submission, and the review is
+            then published to the app page alongside other reviews.</p>
             <a href="https://github.com/PaulSzadurski/projectThree">Github</a>
             <a href="https://anonymovies.netlify.app/">Live</a>
           </div>
-          <div class="imgContainer"><img src="https://via.placeholder.com/400.png/09f/fff" alt=""></div>
+          <div class="imgContainer">
+            <img src="assets/anonymovies1.png" alt="">
+          </div>
         </li>
 
-        <li>
+        <li class="projectCarousel transition">
           <div class="projectContainer">
             <h3>Bang For Your Buck <i class="fas fa-gamepad"></i></h3>
             <p class="technologiesUsed">
@@ -164,29 +172,27 @@
               <i class="fab fa-html5"></i>
               <i class="fab fa-sass"></i>
             </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse debitis illum velit, sed fugit aperiam. Nihil amet
-              natus obcaecati, consectetur, non voluptatem cupiditate modi in dolorum a doloremque exercitationem magnam accusamus
-              commodi vitae ratione iure. Totam provident laborum excepturi reprehenderit?</p>
+            <p>A Javascript app using the CheapShark API which users search for PC
+            games, displaying a list of games as results. Users can also use sort
+            their search with filters such as review score and price.</p>
             <a href="https://github.com/Paul-William-Project/Paul-William-Project-Two">Github</a>
             <a href="https://paul-william-project.github.io/Paul-William-Project-Two/">Live</a>
           </div>
-          <div class="imgContainer"><img src="https://via.placeholder.com/400.png/09f/fff" alt=""></div>
+          <div class="imgContainer"><img src="assets/buck1.png" alt=""></div>
         </li>
 
-        <li>
-          <div class="projectContainer2">
+        <li class="projectCarousel transition">
+          <div class="projectContainer">
             <h3>Willow <i class="fab fa-pagelines"></i></h3>
             <p class="technologiesUsed">
               <i class="fab fa-html5"></i>
               <i class="fab fa-sass"></i>
             </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse debitis illum velit, sed fugit aperiam. Nihil amet
-              natus obcaecati, consectetur, non voluptatem cupiditate modi in dolorum a doloremque exercitationem magnam accusamus
-              commodi vitae ratione iure. Totam provident laborum excepturi reprehenderit?</p>
+            <p>Pixel-perfect conversion of a client design to a multi-page responsive website. Worked with a group to create and document a coding style guide which was followed for this project. </p>
             <a href="https://github.com/PaulSzadurski/projectOne">Github</a>
             <a href="https://paulszadurski.github.io/projectOne/">Live</a>
           </div>
-          <div class="imgContainer"><img src="https://via.placeholder.com/400.png/09f/fff" alt=""></div>
+          <div class="imgContainer"><img src="assets/willow1.png" alt=""></div>
         </li>
       </ul>
 

@@ -93,6 +93,7 @@ nav {
   position: fixed;
   width: 100%;
   padding: 0.5rem 0;
+  z-index: 1;
 }
 
 .siteTitle {
@@ -162,6 +163,7 @@ header p {
 
 h1, header p {
   color: white;
+  transition: ease-in 6s;
 }
 
 /* header animation */
@@ -274,12 +276,44 @@ h2 span {
   height: auto;
 }
 
+.imgContainer i:hover {
+  cursor: pointer;
+}
+
 .imgContainer img {
   box-shadow: -1rem 1rem #f5df4e;
   width: inherit;
 }
+
+.carousel {
+  display: none;
+}
+
+.projectCarousel {
+  display: none;
+}
+
 .projects ul {
   padding-top: 2rem;
+}
+
+.projectControls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.projectControls i:hover {
+  cursor: pointer;
+  color: #f5df4e;
+  transition: ease 1s;
+}
+
+.projectControls p {
+  margin-top: 0;
+  margin-right: 1rem;
+  line-height: 1rem;
 }
 
 .projects p {
@@ -301,6 +335,25 @@ p.technologiesUsed {
 
 .projects i {
   padding-right: 1rem;
+}
+
+/* carousel animation */
+@keyframes next {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.transition {
+  animation: next 1s linear;
 }
 
 /* contact */
