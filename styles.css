@@ -14,6 +14,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 /* styles go here */
 html {
   font-size: 125%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -163,6 +164,32 @@ h1, header p {
   color: white;
 }
 
+/* header animation */
+.skipContainer {
+  text-align: center;
+}
+
+@keyframes skip {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: 1rem;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+.skip {
+  position: relative;
+  animation: skip 2s linear infinite;
+  font-size: 3rem;
+  text-align: center;
+}
+
 /* about */
 section {
   margin: 2rem 0;
@@ -269,6 +296,7 @@ h2 span {
 p.technologiesUsed {
   margin: 0;
   font-size: 1.4rem;
+  color: goldenrod;
 }
 
 .projects i {
