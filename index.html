@@ -62,14 +62,14 @@
         <h2><span>About Me</span></h2>
         <div class="aboutContainer">
           <div class="aboutText">
-            <h3>Hi, I'm <span class="name">Paul Szadurski</span></h3>
-            <p>I'm a front-end web developer with a background in Philosophy and Law. My background has provided me with a foundation in logical thought which has served me well in my programming journey thus far.</p>
+            <h3>Hey there, I'm <span class="name">Paul Szadurski</span></h3>
+            <p>I'm a front-end web developer with a background in Philosophy and Law. This background has given me a foundation in logical thought which has served me well in my programming journey thus far.</p>
             <p>I have experience developing web apps in Javascript and React, and I ensure that every project I complete is responsive, accessible and in line with client requirements. Moreover, I'm currently learning jQuery and am excited to add it to my list of skills in the future.</p>
             <p>I love working in diverse and motivated teams. They push me to always perform at my best and are the environments which I truly thrive in.</p>
-            <p>When I'm not programming, I love reading History books, playing video games and running Dungeons & Dragons campaigns.</p>
+            <p>When I'm not programming, I love reading history books, playing retro video games and running Dungeons & Dragons campaigns.</p>
           </div>
           <div class="aboutImgContainer">
-            <img src="https://via.placeholder.com/300.png/09f/fff" alt="">
+            <img src="assets/portrait.jpg" alt="paul szadurski">
           </div>
         </div>
       </div>
@@ -131,11 +131,11 @@
       <h2><span>My Projects</span></h2>
       <div class="projectControls">
         <button aria-label="previous project">
-          <i class="fas fa-backward" onclick="projectForward(-1)" aria-hidden="true"></i>
+          <i class="fas fa-backward" onclick="projectMove(-1)" aria-hidden="true"></i>
         </button>
         <p><span id="projectNumber"></span>/4</p>
         <button aria-label="next project">
-          <i class="fas fa-forward" onclick="projectForward(1)" aria-hidden="true"></i>
+          <i class="fas fa-forward" onclick="projectMove(1)" aria-hidden="true"></i>
         </button>
       </div>
         <article class="projectCarousel transition">
@@ -153,7 +153,7 @@
             <a class ="projectLink" href="https://podcast-prioritizer.netlify.app/">Live</a>
           </div>
           <div class="imgContainer">
-            <img src="assets/podcast1.png" alt="">
+            <img src="assets/podcast1.png" alt="podcast prioritizer route form">
           </div>
         </article>
 
@@ -174,7 +174,7 @@
             <a class ="projectLink" href="https://anonymovies.netlify.app/">Live</a>
           </div>
           <div class="imgContainer">
-            <img src="assets/anonymovies1.png" alt="">
+            <img src="assets/anonymovies1.png" alt="anonymovies review form">
           </div>
         </article>
 
@@ -194,7 +194,7 @@
             <a class ="projectLink" href="https://github.com/Paul-William-Project/Paul-William-Project-Two">Github</a>
             <a class ="projectLink" href="https://paul-william-project.github.io/Paul-William-Project-Two/">Live</a>
           </div>
-          <div class="imgContainer"><img src="assets/buck1.png" alt=""></div>
+          <div class="imgContainer"><img src="assets/buck1.png" alt="bang your buck search form"></div>
         </article>
 
         <article class="projectCarousel transition">
@@ -209,7 +209,7 @@
             <a class ="projectLink" href="https://github.com/PaulSzadurski/projectOne">Github</a>
             <a class ="projectLink" href="https://paulszadurski.github.io/projectOne/">Live</a>
           </div>
-          <div class="imgContainer"><img src="assets/willow1.png" alt=""></div>
+          <div class="imgContainer"><img src="assets/willow1.png" alt="willow homepage header"></div>
         </article>
 
     </section>
@@ -237,6 +237,7 @@
           </li>
         </ul>
       </div>
+
       <form name="contact" method="POST" data-netlify="true">
         <h2>Send Me a Message</h2>
         <label for="userName">Your Name:</label>
@@ -250,6 +251,7 @@
     </div>
     </section>
   </main>
+
   <footer>
     <p class="wrapper">
       Developed by <span>Paul Szadurski</span>
