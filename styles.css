@@ -6,7 +6,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 *, *:before, *:after {box-sizing: inherit}
 
-.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+.srOnly { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 /* yellow: #e5d049 */
 /* gray: #252b33 */
@@ -49,6 +49,7 @@ h3 {
 
 p {
   line-height: 1.5rem;
+  margin: 0;
 }
 
 ul {
@@ -85,6 +86,10 @@ nav .desktopList {
   max-width: 75%;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 /* nav */
 nav {
   color: #252b33;
@@ -92,12 +97,12 @@ nav {
   background-color: #f5df4e;
   position: fixed;
   width: 100%;
-  padding: 0.5rem 0;
   z-index: 1;
 }
 
 .siteTitle {
   font-size: 1.5rem;
+  margin: 1rem 0;
 }
 
 .mobileNav, .mobileNavOpen {
@@ -106,6 +111,13 @@ nav {
 
 .mobileNavOpen {
   font-size: 2rem;
+  background-color: inherit;
+  color: black;
+}
+
+.mobileNavOpen:hover,
+.mobileNavClose:hover {
+  cursor: pointer;
 }
 
 .mobileNav {
@@ -120,9 +132,13 @@ nav {
   color: white;
 }
 
+.closeContainer {
+  text-align: right;
+}
+
 .mobileNavClose {
-  text-align: end;
   font-size: 3rem;
+  background-color: transparent;
 }
 
 .mobileNav ul {
@@ -140,7 +156,7 @@ nav {
 
 /* header */
 header {
-  background: url(https://images.unsplash.com/photo-1547954575-855750c57bd3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80);
+  background: url(assets/unsplash.jpg);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -169,6 +185,7 @@ h1, header p {
 /* header animation */
 .skipContainer {
   text-align: center;
+  margin-top: 1.5rem;
 }
 
 @keyframes skip {
@@ -229,6 +246,10 @@ h2 span {
   margin-right: 4rem;
 }
 
+.about p {
+  margin-bottom: 0.7rem;
+}
+
 .aboutImgContainer {
   width: auto;
   height: auto;
@@ -264,20 +285,16 @@ h2 span {
 }
 
 /* projects */
-.projects li {
+article {
   display: flex;
   flex-direction: row-reverse;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 
 .imgContainer {
   margin-right: 3rem;
   width: auto;
   height: auto;
-}
-
-.imgContainer i:hover {
-  cursor: pointer;
 }
 
 .imgContainer img {
@@ -304,14 +321,24 @@ h2 span {
   font-size: 1.5rem;
 }
 
-.projectControls i:hover {
-  cursor: pointer;
-  color: #f5df4e;
-  transition: ease 1s;
+.projectControls button {
+  background-color: inherit;
+  color: black;
 }
 
-.projectControls p {
-  margin-top: 0;
+.projectControls button:hover {
+  cursor: pointer;
+}
+
+.projectControls button:hover,
+.projectControls button:focus {
+  color: #f5df4e;
+  transition: ease 0.5s;
+}
+
+.projects .projectControls p {
+  margin-top: 1rem;
+  margin-bottom: 0;
   margin-right: 1rem;
   line-height: 1rem;
 }
@@ -320,7 +347,11 @@ h2 span {
   margin-bottom: 2rem;
 }
 
-.projects a {
+.projects p a {
+  font-weight: bold;
+}
+
+.projectLink {
   color: white;
   background-color: #343a40;
   padding: 0.5rem;
@@ -328,13 +359,19 @@ h2 span {
 }
 
 p.technologiesUsed {
-  margin: 0;
+  margin: 0 0 1rem 0;
   font-size: 1.4rem;
-  color: goldenrod;
 }
 
 .projects i {
   padding-right: 1rem;
+}
+
+.projectLink:hover,
+.projectLink:focus {
+  background-color: #f5df4e;
+  color: black;
+  transition: ease 0.5s;
 }
 
 /* carousel animation */
@@ -386,7 +423,7 @@ form {
   flex-direction: column;
 }
 
-form h2 {
+.contact h2 {
   margin-bottom: 1rem;
 }
 

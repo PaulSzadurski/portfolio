@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Paul Szadurski</title>
+  <link rel="icon" href="assets/favicon.ico" />
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap"
@@ -14,22 +15,26 @@
 </head>
 <body>
   <nav>
-    <ul class="wrapper desktopList">
+    <div class="wrapper desktopList">
       <div class="siteTitle">
-        <li>paulszadurski</li>
+        <p>paulszadurski</p>
       </div>
-      <div class="siteNav">
+      <ul class="siteNav">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
-      </div>      
-      <li>
-        <span class="mobileNavOpen wrapper" onclick="openMenu()"><i class="fas fa-bars"></i></span>
-      </li>
-    </ul>
+      </ul>      
+        <button class="mobileNavOpen" onclick="openMenu()" aria-label="open navigation menu">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+    </div>
     <div class="mobileNav" id="mobileNav">
-      <div class="mobileNavClose wrapper"><i class="far fa-times-circle" onclick="closeMenu()"></i></div>
+      <div class="closeContainer wrapper">
+        <button class="mobileNavClose" onclick="closeMenu()" aria-label="close navigation menu">
+          <i class="far fa-times-circle" aria-hidden="true"></i>
+        </button>
+      </div>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -43,8 +48,10 @@
     <div class="wrapper">
       <h1>Paul Szadurski</h1>
       <p>Web Developer</p>
-      <p class="skipContainer">
-        <a href="#about"><i class="fas fa-chevron-circle-down skip"></i></a>
+      <p class="skipContainer" aria-label="skip to main content">
+          <a href="#about">
+            <i class="fas fa-chevron-circle-down skip" aria-hidden="true"></i>
+          </a>
       </p>
     </div>
   </header>
@@ -56,7 +63,10 @@
         <div class="aboutContainer">
           <div class="aboutText">
             <h3>Hi, I'm <span class="name">Paul Szadurski</span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse consectetur porro reprehenderit illum maxime animi harum id expedita, ut enim itaque eaque iusto magnam quidem, eligendi pariatur! Officiis soluta, quae magni mollitia et, sunt aspernatur fugiat pariatur a repudiandae officia, maiores assumenda cum obcaecati consequuntur nisi? Neque officiis tempore rem est optio repellat voluptatem dolorem quas assumenda perspiciatis! Incidunt, eum ipsam necessitatibus qui veniam, nostrum, dolorum sed accusamus dignissimos quo corrupti voluptas fugit nihil dolores aut?</p>
+            <p>I'm a front-end web developer with a background in Philosophy and Law. My background has provided me with a foundation in logical thought which has served me well in my programming journey thus far.</p>
+            <p>I have experience developing web apps in Javascript and React, and I ensure that every project I complete is responsive, accessible and in line with client requirements. Moreover, I'm currently learning jQuery and am excited to add it to my list of skills in the future.</p>
+            <p>I love working in diverse and motivated teams. They push me to always perform at my best and are the environments which I truly thrive in.</p>
+            <p>When I'm not programming, I love reading History books, playing video games and running Dungeons & Dragons campaigns.</p>
           </div>
           <div class="aboutImgContainer">
             <img src="https://via.placeholder.com/300.png/09f/fff" alt="">
@@ -70,47 +80,47 @@
         <h2><span>My Skills</span></h2>
         <ul>
           <li>
-            <i class="fab fa-html5"></i>
+            <i class="fab fa-html5" aria-hidden="true"></i>
             <p>HTML</p>
           </li>
           <li>
-            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-css3-alt" aria-hidden="true"></i>
             <p>CSS</p>
           </li>
           <li>
-            <i class="fab fa-sass"></i>
+            <i class="fab fa-sass" aria-hidden="true"></i>
             <p>SCSS</p>
           </li>
           <li>
-            <i class="fab fa-js-square"></i>
+            <i class="fab fa-js-square" aria-hidden="true"></i>
             <p>Javascript</p>
           </li>
           <li>
-            <i class="fab fa-react"></i>
+            <i class="fab fa-react" aria-hidden="true"></i>
             <p>React</p>
           </li>
           <li>
-            <i class="fas fa-database"></i>
+            <i class="fas fa-database" aria-hidden="true"></i>
             <p>REST APIs</p>
           </li>
           <li>
-            <i class="fas fa-fire-alt"></i>
+            <i class="fas fa-fire-alt" aria-hidden="true"></i>
             <p>Firebase</p>
           </li>
           <li>
-            <i class="fab fa-github-square"></i>
+            <i class="fab fa-github-square" aria-hidden="true"></i>
             <p>Git</p>
           </li>
           <li>
-            <i class="fas fa-user-friends"></i>
+            <i class="fas fa-user-friends" aria-hidden="true"></i>
             <p>Pair Programming</p>
           </li>
           <li>
-            <i class="fas fa-mobile-alt"></i>
+            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
             <p>Responsive Design</p>
           </li>
           <li>
-            <i class="fas fa-universal-access"></i>
+            <i class="fas fa-universal-access" aria-hidden="true"></i>
             <p>Accessibility</p>
           </li>
         </ul>
@@ -120,81 +130,87 @@
     <section class="projects wrapper" id="projects">
       <h2><span>My Projects</span></h2>
       <div class="projectControls">
-        <i class="fas fa-backward" onclick="projectForward(-1)"></i>
+        <button aria-label="previous project">
+          <i class="fas fa-backward" onclick="projectForward(-1)" aria-hidden="true"></i>
+        </button>
         <p><span id="projectNumber"></span>/4</p>
-        <i class="fas fa-forward" onclick="projectForward(1)"></i>
+        <button aria-label="next project">
+          <i class="fas fa-forward" onclick="projectForward(1)" aria-hidden="true"></i>
+        </button>
       </div>
-      <ul>
-        <li class="projectCarousel transition">
+        <article class="projectCarousel transition">
           <div class="projectContainer">
             <h3>Podcast Prioritizer <i class="fas fa-headphones-alt"></i></h3>
             <p class="technologiesUsed">
-              <i class="fab fa-react"></i>
-              <i class="fas fa-database"></i>
-              <i class="fab fa-html5"></i>
-              <i class="fab fa-css3-alt"></i>
+              <span class="srOnly">This project used React, API, HTML and CSS</span>
+              <i class="fab fa-react" aria-hidden="true"></i>
+              <i class="fas fa-database" aria-hidden="true"></i>
+              <i class="fab fa-html5" aria-hidden="true" ></i>
+              <i class="fab fa-css3-alt" aria-hidden="true"></i>
             </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse debitis illum velit, sed fugit aperiam. Nihil amet natus obcaecati, consectetur, non voluptatem cupiditate modi in dolorum a doloremque exercitationem magnam accusamus commodi vitae ratione iure. Totam provident laborum excepturi reprehenderit?</p>
-            <a href="https://github.com/capibara33/podcastPrioritizer">Github</a>
-            <a href="https://podcast-prioritizer.netlify.app/">Live</a>
+            <p>Web app built in React which uses two APIs (Listen Notes and MapQuest) to allow a user to search for, or be recommended podcasts based on their travel times. Developed alongside <a href="https://aubreykazdan.com/">Aubrey Kazdan</a>, <a href="https://clementsung.com/">Clement Sung</a> and <a href="https://codebyilya.ca/">Ilya Marvin Ilyashyk</a> to fulfill a client brief.</p>
+            <a class ="projectLink" href="https://github.com/capibara33/podcastPrioritizer">Github</a>
+            <a class ="projectLink" href="https://podcast-prioritizer.netlify.app/">Live</a>
           </div>
           <div class="imgContainer">
             <img src="assets/podcast1.png" alt="">
           </div>
-        </li>
+        </article>
 
-        <li class="projectCarousel transition">
+        <article class="projectCarousel transition">
           <div class="projectContainer">
             <h3>Anonymovies <i class="fas fa-film"></i></h3>
             <p class="technologiesUsed">
-              <i class="fab fa-react"></i>
-              <i class="fas fa-fire-alt"></i>
-              <i class="fab fa-html5"></i>
-              <i class="fab fa-css3-alt"></i>
+              <span class="srOnly">This project used React, Firebase, HTML and CSS</span>
+              <i class="fab fa-react" aria-hidden="true"></i>
+              <i class="fas fa-fire-alt" aria-hidden="true"></i>
+              <i class="fab fa-html5" aria-hidden="true"></i>
+              <i class="fab fa-css3-alt" aria-hidden="true"></i>
             </p>
-            <p>Anonymous movie review board made using React. Users can write a
+            <p>Anonymous movie review board made using React and Firebase. Users can write a
             review which is added to a database upon submission, and the review is
-            then published to the app page alongside other reviews.</p>
-            <a href="https://github.com/PaulSzadurski/projectThree">Github</a>
-            <a href="https://anonymovies.netlify.app/">Live</a>
+            then published to the board alongside other reviews.</p>
+            <a class ="projectLink" href="https://github.com/PaulSzadurski/projectThree">Github</a>
+            <a class ="projectLink" href="https://anonymovies.netlify.app/">Live</a>
           </div>
           <div class="imgContainer">
             <img src="assets/anonymovies1.png" alt="">
           </div>
-        </li>
+        </article>
 
-        <li class="projectCarousel transition">
+        <article class="projectCarousel transition">
           <div class="projectContainer">
             <h3>Bang For Your Buck <i class="fas fa-gamepad"></i></h3>
             <p class="technologiesUsed">
-              <i class="fab fa-js-square"></i>
-              <i class="fas fa-database"></i>
-              <i class="fab fa-html5"></i>
-              <i class="fab fa-sass"></i>
+              <span class="srOnly">This project used Javascript, API, HTML and SCSS</span>
+              <i class="fab fa-js-square" aria-hidden="true"></i>
+              <i class="fas fa-database" aria-hidden="true"></i>
+              <i class="fab fa-html5" aria-hidden="true"></i>
+              <i class="fab fa-sass" aria-hidden="true"></i>
             </p>
-            <p>A Javascript app using the CheapShark API which users search for PC
+            <p>A vanilla Javascript web app which uses the CheapShark API to let users search for PC
             games, displaying a list of games as results. Users can also use sort
-            their search with filters such as review score and price.</p>
-            <a href="https://github.com/Paul-William-Project/Paul-William-Project-Two">Github</a>
-            <a href="https://paul-william-project.github.io/Paul-William-Project-Two/">Live</a>
+            their searches with filters such as review score and price. Developed alongside <a>William Gomes</a>.</p>
+            <a class ="projectLink" href="https://github.com/Paul-William-Project/Paul-William-Project-Two">Github</a>
+            <a class ="projectLink" href="https://paul-william-project.github.io/Paul-William-Project-Two/">Live</a>
           </div>
           <div class="imgContainer"><img src="assets/buck1.png" alt=""></div>
-        </li>
+        </article>
 
-        <li class="projectCarousel transition">
+        <article class="projectCarousel transition">
           <div class="projectContainer">
             <h3>Willow <i class="fab fa-pagelines"></i></h3>
             <p class="technologiesUsed">
-              <i class="fab fa-html5"></i>
-              <i class="fab fa-sass"></i>
+              <span class="srOnly">This project used HTML and SCSS</span>
+              <i class="fab fa-html5" aria-hidden="true"></i>
+              <i class="fab fa-sass" aria-hidden="true"></i>
             </p>
             <p>Pixel-perfect conversion of a client design to a multi-page responsive website. Worked with a group to create and document a coding style guide which was followed for this project. </p>
-            <a href="https://github.com/PaulSzadurski/projectOne">Github</a>
-            <a href="https://paulszadurski.github.io/projectOne/">Live</a>
+            <a class ="projectLink" href="https://github.com/PaulSzadurski/projectOne">Github</a>
+            <a class ="projectLink" href="https://paulszadurski.github.io/projectOne/">Live</a>
           </div>
           <div class="imgContainer"><img src="assets/willow1.png" alt=""></div>
-        </li>
-      </ul>
+        </article>
 
     </section>
 
@@ -202,16 +218,22 @@
     <div class="wrapper contactContainer">
       <div class="contactText">
         <h2>Let's Get in Touch</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quis dolore, expedita adipisci perspiciatis nihil id cum delectus quod quam ab animi eligendi dolorum repellendus sint? Dolorum pariatur error consequatur.</p>
+        <p>I'm always open to discuss new projects, offers, or just to chat. Feel free to message me on any of the provided links or my contact form.</p>
         <ul>
           <li>
-            <i class="fas fa-envelope-square"></i>
+            <a href="mailto:paulszadurski2@gmail.com" aria-label="send me an email">
+              <i class="fas fa-envelope-square" aria-hidden="true"></i>
+            </a>
           </li>
           <li>
-            <i class="fab fa-github-square"></i>
+            <a href="https://github.com/PaulSzadurski/" aria-label="go to my github">
+              <i class="fab fa-github-square" aria-hidden="true"></i>
+            </a>
           </li>
           <li>
-            <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/paul-szadurski-6100b820b/" aria-label="go to my linkedin">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
           </li>
         </ul>
       </div>
@@ -220,7 +242,7 @@
         <label for="userName">Your Name:</label>
         <input required type="text" id="userName" name="userName">
         <label for="userEmail">Your Email:</label>
-        <input required type="text" id="userEmail" name="userEmail">
+        <input required type="email" id="userEmail" name="userEmail">
         <label for="message">Your Inquiry:</label>
         <textarea required name="message" id="message" rows="10"></textarea>
         <button type="submit">Submit Inquiry <i class="fas fa-arrow-right"></i></button>
