@@ -7,20 +7,18 @@ const closeMenu = () => {
   document.getElementById("mobileNav").style.top = "-100%";
 }
 
-
 // project carousel
 let projectIndex = 1 
 
-const projectForward = (n) => {
+const projectMove = (n) => {
   showProject(projectIndex += n);
 }
 
 const showProject = (n) => {
-  let currentProject = document.getElementsByClassName("projectCarousel");
-  let testV = document.getElementById("projectNumber");
+  let projects = document.getElementsByClassName("projectCarousel");
+  let currentProject = document.getElementById("projectNumber");
 
-
-  if (n > currentProject.length) {
+  if (n > projects.length) {
     projectIndex = 1
   }
 
@@ -28,19 +26,19 @@ const showProject = (n) => {
     projectIndex = 4;
   }
 
-  for (i = 0; i < currentProject.length; i++) {
-    currentProject[i].style.display = "none";
+  for (i = 0; i < projects.length; i++) {
+    projects[i].style.display = "none";
   }
 
-  currentProject[projectIndex - 1].style.display = "flex";
+  projects[projectIndex - 1].style.display = "flex";
 
-  while (testV.hasChildNodes()) {
-    testV.removeChild(testV.firstChild);
+  while (currentProject.hasChildNodes()) {
+    currentProject.removeChild(currentProject.firstChild);
   }
 
-  let testN = document.createTextNode(projectIndex);
+  let newProject = document.createTextNode(projectIndex);
 
-  testV.appendChild(testN);
+  currentProject.appendChild(newProject);
 }
 
 showProject(projectIndex);
