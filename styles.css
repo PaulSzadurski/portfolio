@@ -191,7 +191,7 @@ nav .desktopList,
 
 /* header */
 header {
-  background: url(assets/unsplash.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.884)), url(assets/unsplash.jpg);
   height: 100vh;
   display: flex;
   justify-content: center;
