@@ -95,6 +95,17 @@ a {
   color: inherit;
 }
 
+.projectControls button:hover,
+.projectControls button:focus,
+.projectLink:hover,
+.projectLink:focus,
+form button:hover,
+form button:focus,
+.contactText i:hover,
+.contactText i:focus {
+  transition: ease 0.5s;
+}
+
 /* nav */
 nav {
   color: #252b33;
@@ -333,7 +344,6 @@ article {
 .projectControls button:hover,
 .projectControls button:focus {
   color: #f5df4e;
-  transition: ease 0.5s;
 }
 
 .projects .projectControls p {
@@ -366,7 +376,6 @@ p.technologiesUsed {
 .projectLink:focus {
   background-color: #f5df4e;
   color: black;
-  transition: ease 0.5s;
 }
 
 /* carousel animation */
@@ -414,9 +423,19 @@ textarea {
   padding-right: 2rem;
 }
 
+.contactText i:hover,
+.contactText i:focus {
+  color: #444b52;
+}
+
 form {
   display: flex;
   flex-direction: column;
+}
+
+form button:hover,
+form button:focus {
+  background-color: #000000;
 }
 
 .contact h2 {
