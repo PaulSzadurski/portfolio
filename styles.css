@@ -9,6 +9,9 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 /* styles go here */
 
 /* general styling */
+:target {
+  padding-top: 4rem;
+}
 
 html {
   font-size: 125%;
